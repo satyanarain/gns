@@ -34,12 +34,13 @@
      
     <div class="form-group">
       <label for="email">Email Address</label>
-        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" onkeypress="removeBorder2()">
      
     </div>
    <div class="form-group">
       <label for="country" >Country</label>
       <select name="country" id="country" class="form-control" onchange="isableState(this.value)">
+        <option value="">Select Country</option>
 	<option value="United States">United States</option> 
 	<option value="United Kingdom">United Kingdom</option> 
 	<option value="Afghanistan">Afghanistan</option> 
@@ -364,6 +365,8 @@ var email= $("#email").val();
 var country= $("#country").val();
 var state= $("#listBox").val();
 var city= $("#validationCustom05").val();
+
+   var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 var stringdata="name="+name+"&phone="+phone+"&email="+email+"&country="+country+"&state="+state+"&city="+city+"&country_code=" + country_code;
 
 if(name=='')
@@ -372,6 +375,11 @@ $("#name").removeClass('form-control')
 $("#name").addClass('form-control red')  
 //$("#name-error").show()  
  return false;
+} else if(email!='' && !filter.test(email)){
+ //alert("please enter valid email id")
+$("#email").removeClass('form-control')    
+$("#email").addClass('form-control red') 
+return false;  
 } else if(phone==''){
 $("#phone").removeClass('form-control')    
 $("#phone").addClass('form-control red') 
@@ -438,6 +446,19 @@ var name= $("#name").val();
  
 }
 
+
+  function removeBorder2()
+{
+var email= $("#email").val();
+ var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if(email!='' && filter.test(email)){
+
+   $("#email").removeClass('form-control red')    
+   $("#email").addClass('form-control')  
+ }
+ 
+}
+
 function userLogin2()
 {
 var password= $("#password").val(); 
@@ -450,14 +471,7 @@ var password= $("#password").val();
  }
  
 }  
-    
-    
-    
-    
-    
-    
-    
-    
+ 
     $("#phone").intlTelInput({
       // allowDropdown: false,
       // autoHideDialCode: false,

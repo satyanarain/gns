@@ -13,7 +13,7 @@ if($link==false)
 } else {
   //echo "  connect";
 }
-
+date_default_timezone_set('Asia/Kolkata');
 function get_client_ip() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
