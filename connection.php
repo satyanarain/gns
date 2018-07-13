@@ -2,10 +2,10 @@
 ob_start();
 session_start();
 error_reporting(1);
-$password="root";
-$user="root";
+$password="opiano1v_gns";
+$user="opiano1v_gns";
 $host="localhost";
-$database="gns";
+$database="opiano1v_gns";
 $link=mysqli_connect($host, $user, $password, $database) or die(mysqli_error());
 if($link==false)
 {
