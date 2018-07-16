@@ -38,7 +38,7 @@ function dateView($date_blank) {
 <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
      <?php 
-     $query="SELECT `id`, `name`, `phone`, `email`, `country`, `state`, `city`, `country_code`, `ip_address`, `created_at`, `updated_at` FROM `users` WHERE 1 ";
+     $query="SELECT `id`, `name`, `phone`, `email`, `country`, `state`, `city`, `country_code`, `ip_address`, `created_at`, `updated_at` FROM `users` order by (id,desc) ";
      $data= mysqli_query($link, $query) or die(mysqli_error($link));   
   ?>  
   <tr>
