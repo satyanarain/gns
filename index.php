@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
  <head>
-        <meta charset="utf-8">
-        
-           <title>Gurudwara Nanaksar Sahib</title>
-           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+        <title>Gurudwara Nanaksar Sahib</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,7 +29,7 @@
     </div>
   <div class="form-group">
       <label for="phone">Mobile No.<span style="color:#ff0000">*</span></label>
-      <input id="phone" name="phone" class="form-control" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)"  placeholder="1111111111">
+      <input id="phone" name="phone" class="form-control" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)"  placeholder="1111-111-111">
      <div class="invalid-feedback">
         Please fill mobile.
       </div>
