@@ -24,6 +24,7 @@ function dateView($date_blank) {
  <head>
         <meta charset="utf-8">
         <title>Gurudwara Nanaksar Sahib</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -38,7 +39,7 @@ function dateView($date_blank) {
 <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
      <?php 
-     $query="SELECT `id`, `name`, `phone`, `email`, `country`, `state`, `city`, `country_code`, `ip_address`, `created_at`, `updated_at` FROM `users` ORDER BY id desc ";
+     $query="SELECT `id`, `name`, `phone`, `email`, `country`, `state`, `city`, `country_code`, `ip_address`, `created_at`, `updated_at` FROM `users` ORDER BY id desc";
      $data= mysqli_query($link, $query) or die(mysqli_error($link));   
   ?>  
   <tr>

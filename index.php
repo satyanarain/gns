@@ -2,7 +2,9 @@
 <html>
  <head>
         <meta charset="utf-8">
+        
            <title>Gurudwara Nanaksar Sahib</title>
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,8 +16,7 @@
       
     </head>
     <body class="body-back">
-	
-<div class="container">
+	<div class="container">
 	 <h1 class="text-center"><img src="img/header.png" alt="" class="img-responsive" /></h1>
 	 <div class="register-form">
 	 <h2>Register Now</h2>  
@@ -29,7 +30,7 @@
     </div>
   <div class="form-group">
       <label for="phone">Mobile No.<span style="color:#ff0000">*</span></label>
-        <input id="phone" name="phone" class="form-control" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)" >
+      <input id="phone" name="phone" class="form-control" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)"  placeholder="1111111111">
      <div class="invalid-feedback">
         Please fill mobile.
       </div>
@@ -486,7 +487,7 @@ var password= $("#password").val();
     $("#phone").intlTelInput({
       // allowDropdown: false,
       // autoHideDialCode: false,
-      // autoPlaceholder: "off",
+       autoPlaceholder: "off",
       // dropdownContainer: "body",
       // excludeCountries: ["us"],
       // formatOnDisplay: false,
