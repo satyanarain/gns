@@ -10,10 +10,15 @@
         <!------ Include the above in your HEAD tag ---------->
         <link rel="stylesheet" href="build/css/intlTelInput.min.css">
         <link rel="stylesheet" href="build/css/custom.css">
+        <link rel="stylesheet" href="css/custom-design.css">
       
     </head>
+    <body class="body-back">
+	
 <div class="container">
-     <h1>Gurudwara Nanaksar Sahib</h1>  
+	 <h1 class="text-center"><img src="img/header.png" alt="" class="img-responsive" /></h1>
+	 <div class="register-form">
+	 <h2>Register Now</h2>  
     <form autocomplete="off" id="myform" class="needs-validation" novalidate method="post">
   <div class="form-group">
       <label for="name">Name <span style="color:#ff0000">*</span></label>
@@ -24,9 +29,7 @@
     </div>
   <div class="form-group">
       <label for="phone">Mobile No.<span style="color:#ff0000">*</span></label>
-    </div>
-    <div class="form-group">
-        <input id="phone" name="phone" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)" >
+        <input id="phone" name="phone" class="form-control" type="tel" maxlength="10"  style="width:100%;" required onkeypress="return isIntegerKey(event)" >
      <div class="invalid-feedback">
         Please fill mobile.
       </div>
@@ -338,8 +341,8 @@
         <button type="button" class="close" data-dismiss="alert">×</button>	
         <strong id="successMessagedis">Data saved successfully!</strong>
       </div>
-       <div class="btn btn-primary" id="submit1"><i class="fa fa-paper-plane"></i> Submit</div>
-    <div class="btn btn-primary" type="submit" onclick="reSetform()">Reset</div>
+       <div class="btn btn-warning" id="submit1"><i class="fa fa-paper-plane"></i> Submit</div>
+    <div class="btn btn-warning" type="submit" onclick="reSetform()">Reset</div>
 </form>
 
   <!-- Load jQuery from CDN so can run demo immediately -->
@@ -516,11 +519,7 @@ if(name!='')
 $("#country").removeClass('form-control red')    
    $("#country").addClass('form-control')  
  }   
-        
-        
-        
-        
-      if(id=='India')
+  if(id=='India')
       {
           $("#stateList").show()
       }else
@@ -530,5 +529,7 @@ $("#country").removeClass('form-control red')
    }
 
 </script>
-	</div>
 </div>
+</div>
+	</div>
+</body>
