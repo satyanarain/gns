@@ -400,6 +400,14 @@ $.ajax({
   success:function(data)
   {
   $("#successMessage").show();
+  
+$("#name").val('');
+$("#phone").val('');
+$("#email").val('');
+$("#country").val('');
+$("#listBox").val('');
+$("#validationCustom05").val('');
+  
 }
 });
 setTimeout(function() {
